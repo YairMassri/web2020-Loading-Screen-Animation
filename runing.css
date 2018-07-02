@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    margin: 0;
 }
 .background {
     background: url(mountain-game-background-8133_imgs_8133.png) repeat-x;
