@@ -1,0 +1,113 @@
+body {
+    overflow: hidden;
+}
+.background {
+    background: url(mountain-game-background-8133_imgs_8133.png) repeat-x;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-size: 640px 100%;
+    animation: back 5s linear infinite;
+}
+.tree {
+    background: url(tree-silhouette-3.png) repeat-x;
+    position: absolute;
+    top: 26%;
+    height: 1024px;
+    width: 100%;
+    z-index: 2;
+    background-size: 859px 553px;
+    animation: tree 3s linear infinite;
+}
+.man {
+    position: absolute;
+    bottom: 0;
+    /* top: 0; */
+    margin: auto;
+    z-index: 1;
+    background: url(scottpilgrim_multiple.png) 0 0 no-repeat; 
+    height: 140px;
+    width: 108px;
+    margin: 100px auto 0;
+    overflow: hidden;
+    animation: manrun .5s steps(8) infinite ,
+    manaround 5s linear infinite 1s;
+}
+.horse {
+    position: absolute;
+    bottom: 0;
+    /* top: 0; */
+    margin: auto;
+    z-index: 1;
+    background: url(HorseSpriteSheetWhite.png) 0 0 no-repeat; 
+    height: 248px;
+    width: 400px;
+    margin: 100px auto 0;
+    overflow: hidden;
+    animation: horserun .5s steps(5) infinite,
+    horsearound 5s linear infinite;
+}
+
+@keyframes back {
+    from {
+      background-position: 640px 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+@keyframes tree {
+    from {
+      background-position: 859px 0;
+    }
+    to {
+      background-position: 0 0;
+    }
+  }
+
+@keyframes manrun {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -864px 0;
+    }
+  }
+@keyframes horserun {
+    0% {
+        background-position: 0 0;
+    }
+    33.333% {
+        background-position: -2000px 0;
+    }
+    33.334% {
+        background-position: 0 -248px;
+    }
+    66.666% {
+        background-position: -2000px -248px;
+    }
+    66.667% {
+        background-position: 0 -496px;
+    }
+    100% {
+        background-position: -2000px -496px;
+    }
+  }
+
+  @keyframes manaround {
+    0% {
+        left: -113px;
+    }
+    100% {
+        left: 100%;
+    }
+  }
+  @keyframes horsearound {
+    0% {
+        left: -400px;
+    }
+    100% {
+        left: 100%;
+    }
+  }
